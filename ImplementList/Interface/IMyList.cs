@@ -8,11 +8,12 @@ namespace ImplementList.Interface
     {
         Node FirstNode { get; set; }
         int Count { get; set; }
-        void Add(Node node);
+        void Add(int value);
+        void PrintAll();
     }
-    class Node
+    public class Node
     {
-       int Value { get; set; }
-       Node NextNode { get; set; }
+      public int Value { get; set; }
+      public Node NextNode { get; set; }
     }
 }
