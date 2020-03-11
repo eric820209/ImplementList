@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ImplementList.List
 {
-    class FiLo_List:IList
+    class FiLo_List
     {
     }
 }
