@@ -18,29 +18,12 @@ namespace ImplementList.List
 
         public void Add(int NewValue)
         {
-            Node node = new Node();
-            node.Value = NewValue;
-            node.NextNode = FirstNode;
-            FirstNode = node;
-            Count += 1;
+          
         }
 
         public  void  PrintAll()
         {
-            Node TempNode =FirstNode;
-            FirstNode.Value = 100;
-            if (Count == 0)
-            {
-                Console.WriteLine("Exception : List is null");
-                return;
-            }
-            while (TempNode != null)
-            {
-                Console.Write($" {TempNode.Value} -> ");
-
-                TempNode = TempNode.NextNode;
-            };
-
+          
         }
     }
 }

@@ -15,14 +15,31 @@ namespace ImplementList.List
         public Node FirstNode { get; set; }
         public int Count { get; set; }
 
-        public void Add(int value)
+
+        public void Add(int NewValue)
         {
-            throw new NotImplementedException();
+            Node node = new Node();
+            node.Value = NewValue;
+            node.NextNode = FirstNode;
+            FirstNode = node;
+            Count += 1;
         }
 
         public void PrintAll()
         {
-            throw new NotImplementedException();
+            Node TempNode = FirstNode;
+            if (Count == 0)
+            {
+                Console.WriteLine("Exception : List is null");
+                return;
+            }
+            while (TempNode != null)
+            {
+                Console.Write($" {TempNode.Value} -> ");
+
+                TempNode = TempNode.NextNode;
+            };
+
         }
     }
 }

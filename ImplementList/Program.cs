@@ -15,7 +15,7 @@ namespace ImplementList
             List1.Add(4);
             List1.Add(5);
             List1.PrintAll();
-            List1.PrintAll();
+
             Console.Read();
         }
     }
