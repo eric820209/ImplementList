@@ -1,5 +1,6 @@
 ﻿using ImplementList.Interface;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,11 +11,17 @@ namespace ImplementList.List
         public FiLo_List()
         {
             FirstNode = null;
+            LastNode = null;
             Count = 0;
         }
         public Node FirstNode { get; set; }
         public int Count { get; set; }
+        public Node LastNode { get ; set; }
 
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
 
         public void Add(int NewValue)
         {
@@ -22,8 +29,14 @@ namespace ImplementList.List
             node.Value = NewValue;
             node.NextNode = FirstNode;
             FirstNode = node;
+            if (Count == 0)
+            {
+                LastNode = FirstNode;
+            }
+
             Count += 1;
         }
+
 
         public void PrintAll()
         {
@@ -39,7 +52,7 @@ namespace ImplementList.List
 
                 TempNode = TempNode.NextNode;
             };
-
+            Console.WriteLine($"Last={LastNode.Value}");
         }
     }
 }

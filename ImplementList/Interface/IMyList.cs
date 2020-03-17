@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ImplementList.Interface
 {
-    interface IMyList
+    interface IMyList: IEnumerable
     {
         Node FirstNode { get; set; }
+        Node LastNode { get; set; }
         int Count { get; set; }
         void Add(int value);
         void PrintAll();
