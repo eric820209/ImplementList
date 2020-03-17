@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ImplementList.List
 {
-    class FiFo_List : IMyList
+    public class FiFo_List : IMyList
     {
         public FiFo_List()
         {
@@ -20,7 +20,8 @@ namespace ImplementList.List
 
         public IEnumerator GetEnumerator()
         {
-            throw new NotImplementedException();
+            MyEnumerator enumerator = new MyEnumerator(this);
+            return enumerator;
         }
 
         public void Add(int NewValue)

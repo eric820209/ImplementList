@@ -1,4 +1,5 @@
-﻿using ImplementList.List;
+﻿using ImplementList.Interface;
+using ImplementList.List;
 using System;
 using System.Collections.Generic;
 
@@ -24,12 +25,13 @@ namespace ImplementList
             List2.Add(4);
             List2.Add(5);
             List2.PrintAll();
-            Console.Read();
 
-            foreach (var a in List1)
-            { 
-            
+
+            foreach (Node a in List2)
+            {
+                Console.Write($"{a.Value}");
             }
+            Console.ReadLine();
         }
     }
 }
